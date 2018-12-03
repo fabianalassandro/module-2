@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec  3 14:00:33 2018
+
+@author: fabia
+"""
+
+def cheese_and_crackers(cheese_count, boxes_of_crackers):
+    print ("You have {} cheeses!".format(cheese_count))
+    print ("You have {} boxes of crackers!".format(boxes_of_crackers))
+    print ("Man that's enough for a party!")
+    print ("Get a blanket.\n")
+    
+print ('We can just give the function numbers directly')
+cheese_and_crackers(20, 30)
+
+
+print ("OR, we can use variables from our script:")
+amount_of_cheese = 10
+amount_of_crackers = 50
+
+cheese_and_crackers(amount_of_cheese, amount)
+
+
+
