@@ -7,7 +7,8 @@ Created on Mon Dec  3 13:43:23 2018
 
 ##############################################
 
-#LEARN PYTHON IN THE HARD WAY - Ex. 18 
+#LEARN PYTHON IN THE HARD WAY
+# Exercise 18 - NAMES, VARIABLES, CODE, FUNCTIONS 
 
 ##############################################
 
