@@ -50,7 +50,7 @@ def checkBalance(balance):
         return False
     
 def transaction():
-    transactionRequest = input('If you want to check your credit balance type 1. If you want to purchase a data bundle type 2')
+    transactionRequest = input('If you want to check your credit balance type 1. If you want to purchase a data bundle type 2: ')
     return transactionRequest
 
 def MultipleOfFive(amount):
@@ -58,14 +58,14 @@ def MultipleOfFive(amount):
 
 def buyData(balance):
     maxDataPurchase = 100.00
-    print ('Please type the phone number you need to top-up: ')
+    print ('\n Please type the phone number you need to top-up: ')
     number1 = input()
-    print ('Please re-enter the phone number')
+    print ('\n Please re-enter the phone number')
     number2 = input()
     
     if number1 == number2:
-        print ('Cool! Now you can top-up your number./n Maximum Top-up is 100 GPB./n You can top-up just with multiple of 5.')
-        amount = float(input('How much do you want to top-up? Remember that has to be a multiple of 5.'))
+        print ('Cool! Now you can top-up your number.\n Maximum Top-up is 100 GPB.\n You can top-up just with multiple of 5.')
+        amount = float(input('How much do you want to top-up? Remember that has to be a multiple of 5. '))
     
         if amount > maxDataPurchase:
             print ('Amount exceeds maximum top-up allowed.')
