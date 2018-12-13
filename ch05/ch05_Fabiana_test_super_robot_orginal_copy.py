@@ -4,7 +4,6 @@ Created on Wed Dec  5 15:27:41 2018
 
 @author: fabia
 """
-import sys
 
 class Animal():
     def eat(self):
@@ -22,14 +21,11 @@ class CleanRobot(Robot):
         print('I vacuum dust')
         
 class SuperRobot():
-    def __init__(self, name, age):
+    def __init__(self):
         #This class contains 3 objects
-        self.name = name
-        self.age = age
         self.o1 = Robot()
         self.o2 = Dog()
         self.o3 = CleanRobot()
-            
     def playGame(self):
         print('alphago game')
     def move(self):
@@ -39,14 +35,8 @@ class SuperRobot():
     def clean(self):
         return self.o3.clean() #using cleanrobot method
         
-#bob = SuperRobot()
-#bob.move()
-#bob.bark()
-#
-#print('Bob is the best robotdog ever! Let\'s talk with Bob. So, Bob what can you do ?' + str(bob.bark() ))
-        
-name = sys.argv[1]
-age = sys.argv[2]
+bob = SuperRobot()
+bob.move()
+bob.bark()
 
-print(name)
-print(age)
+print('Bob is the best robotdog ever! Let\'s talk with Bob. So, Bob what can you do ?' + str(bob.bark() ))

@@ -10,13 +10,13 @@ def DataBundlePurchase(truePasscode, balance):
         transactionRequest = transaction()
         if transactionRequest == '1':
             print('Your balance is {}'.format(balance))
-            return ('Your balance is {}'.format(balance))
+#            return ('Your balance is {}'.format(balance))
         elif transactionRequest == '2':
              buyData(balance)
-             return 'Buy data' 
+#             return 'Buy data' 
         else:
             print('Your balance is not sufficient:{}'.format(balance))
-            return ('Your balance is not sufficient:{}'.format(balance))
+#            return ('Your balance is not sufficient:{}'.format(balance))
     else:
         return ('Wait 10 minutes and try again.')
         

@@ -54,6 +54,7 @@ like = "painting"
 age_description = "My age is {0} and I like {1}.".format(age, like)
 print (age_description)
 
-"""culo"""
+"""sono un commento
+su due righe"""
 
 

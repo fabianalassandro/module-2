@@ -29,7 +29,7 @@ c1po = CleanRobot()
 c1po.clean()
 c1po.move()
 
-print('Hello I\'m C1po and '+ str(c1po.clean()))
+#print('Hello I\'m C1po and '+ str(c1po.clean()))
 
 #bob = CookRobot()
 #bob.cook()
