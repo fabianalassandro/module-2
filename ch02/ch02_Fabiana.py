@@ -120,7 +120,7 @@ print (strExample.split('-'))
 
 
 """I'm a comment
-on two lines. It's possib
+on two lines. 
 """
 
 
