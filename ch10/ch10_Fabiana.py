@@ -155,7 +155,7 @@ print(something)
 
 print(sorted(something.keys(), key=lambda k: k))
 print(sorted(something))#This is theshort versione of the one on top 
-
+ 
 
 #Order them for by first value
 print()
