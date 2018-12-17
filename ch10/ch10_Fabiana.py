@@ -157,17 +157,17 @@ print(sorted(something.keys(), key=lambda k: k))
 print(sorted(something))#This is theshort versione of the one on top 
  
 
-#Order them for by first value
+#Order them by first value
 print()
 print('Sorting dictionary by value [0]')
 print(sorted(something.values(), key=lambda v : v[0]))
 
-#Order them for by second value
+#Order them by second value
 print()
 print('Sorting dictionary by value [1]')
 print(sorted(something.values(), key=lambda v : v[1]))
 
-#Order them for by third value
+#Order them by third value
 print()
 print('Sorting dictionary by value [2]')
 print(sorted(something.values(), key=lambda v : v[2]))
