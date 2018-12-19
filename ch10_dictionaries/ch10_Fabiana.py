@@ -101,7 +101,7 @@ labels = list(counts.keys())
 print(labels)
 
 # Sorting a dictionary by values by using lambda
-labels.sort(key=lambda v:counts[v])
+labels.sort(key=lambda k:counts[k])
 print(labels)
 
 
@@ -121,13 +121,17 @@ print(sorted(friends.items(), key=lambda c: c[1][1]))#-->
 #########################
 #PS: discover how to transform a dictionary to a list
 
-friends = { 'Pooh':123, 'Tigger':456, 'Eeyore':789, 'Piglet':000}
+friends = { 'Pooh':123, 'Tigger':456, 'Eeyore':789, 'Piglet':110}
 
 friends_list=list(friends.values())
 print(friends_list)
 
-friends_list.append('P')#???????????????????????????
+#friends_list.append('Rabbit':220)
+#print(friends_list) --> Invalid syntax 
+# I cannot add a key+value to a list beacause lists contain just values. This is why we have dictionaries :)
 
+friends['Rabbit']=220
+print(friends_list)#?????????????
 
 #----------------------------------------------
 # Task 6 - How to avoid key errors
