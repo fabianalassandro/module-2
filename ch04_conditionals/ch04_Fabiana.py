@@ -35,7 +35,7 @@ number = int(number) #Converts the input string to an integer. We're using it be
 
 if number > 10:
     print ("Too high!")
-if number <= 0:# This second if should be an elif. I'm usinf if just for this example
+if number <= 0:# This second if should be an elif. I'm using if just for this example
     print ("Too low!")
 else: print("Cool")
 
