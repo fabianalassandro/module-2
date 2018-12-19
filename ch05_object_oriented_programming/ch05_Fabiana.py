@@ -5,6 +5,18 @@ Created on Wed Dec  5 09:12:52 2018
 @author: fabia
 """
 
+##########################################
+
+#CHAPTER 05 - OBJECT ORIENTED PROGRAMMING
+
+##########################################
+
+
+#----------------------------------------
+# Task 01 - Using classes
+#----------------------------------------
+
+print()
 class Customer(object):
     """
     A customer of ABC Bank with a checking account. Customers have the following properties:
@@ -40,3 +52,77 @@ print(fabiana.balance)
 print(jason) 
 
   
+#----------------------------------------------------------
+# Task 02 & 3 - Create my own object (Classes and Superclasses)
+#----------------------------------------------------------
+
+# Using Inheritance
+
+print()
+class Robot():
+    def move(self):
+        print('...move move move..')
+        
+class CleanRobot(Robot):
+    def clean(self):
+        print('I vacuum dust')
+        return('I vacuum dust')
+        
+class CookRobot(Robot):
+    def cook(self):
+        print('I make rice')
+        
+bob = CleanRobot()
+bob.clean()
+bob.move()
+
+print('Hello I\'m Bob and '+ str(bob.clean()))
+
+bob = CookRobot()
+bob.cook()
+
+
+#----------------------------------------------------------
+# Task 04 - How to use Classes ans Superclasses 
+#----------------------------------------------------------
+
+# Using Association
+print()
+
+class Animal():
+    def eat(self):
+        print('yum')
+class Dog(Animal):
+    def bark(self):
+        print('Woof!')
+        return('Woof!')#try to comment it and check the console again
+        
+class Robot():
+    def move(self):
+        print('...move move move...')
+class CleanRobot(Robot):
+    def clean(self):
+        print('I vacuum dust')
+        
+class SuperRobot():
+    def __init__(self):
+        #This class contains 3 objects
+        self.o1 = Robot()
+        self.o2 = Dog()
+        self.o3 = CleanRobot()
+            
+    def playGame(self):
+        print('alphago game')
+    def move(self):
+        return self.o1.move() #using robot class method
+    def bark(self):
+        return self.o2.bark() #using dog class method
+    def clean(self):
+        return self.o3.clean() #using cleanrobot method
+        
+gianni = SuperRobot()
+gianni.move()
+gianni.bark()
+
+print('Gianni is the best robotdog ever! Let\'s talk with him. So, what can you do ?' + str(gianni.bark() ))
+        
