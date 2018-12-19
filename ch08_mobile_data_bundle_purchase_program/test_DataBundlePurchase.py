@@ -5,6 +5,14 @@ Created on Tue Dec 11 13:53:02 2018
 @author: fabia
 """
 
+####################################################
+
+# CHAPTER 08 - MOBILE DATA BUNDLE PURCHASE PROGRAMME
+
+####################################################
+
+# Test file
+
 from simplebundlepurchase import DataBundlePurchase
 
 # Test call to programme:

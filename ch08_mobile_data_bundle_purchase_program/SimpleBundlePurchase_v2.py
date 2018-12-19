@@ -5,6 +5,14 @@ Created on Tue Dec 11 13:54:32 2018
 @author: fabia
 """
 
+####################################################
+
+# CHAPTER 08 - MOBILE DATA BUNDLE PURCHASE PROGRAMME
+
+####################################################
+
+# Functions file
+
 def DataBundlePurchase(truePasscode, balance):
     if passwordCheck(truePasscode) == True:
         transactionRequest = transaction()
@@ -41,7 +49,7 @@ def passwordCheck(truePasscode):
     else: 
         print('1nd attempt successfully, ')
         return True
-# 
+ 
     
 def checkBalance(balance):
     if balance > 0:

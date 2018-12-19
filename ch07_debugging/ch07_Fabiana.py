@@ -5,8 +5,14 @@ Created on Tue Dec 11 09:27:35 2018
 @author: fabia
 """
 
-#userInput = input('please give a number ')
-#result = userInput - 2
+########################################
+
+# CHAPTER 07 - DEBUGGING
+
+#######################################
+
+userInput = input('please give a number ')
+result = userInput - 2
 
 userInput = input('please give a number ')
 print = (type(userInput))
@@ -16,12 +22,14 @@ def simpleOperation(userInput):
     result = userInput - 2
     return result
 
+result = simpleOperation(userInput)
+print(result)
+
 def nestedOperation():
     result = nestedOperation(userInput)
     result2 = result * 2
     return result2
 
 result = simpleOperation(userInput)
-result = nestedOperation()
-
+result2 = nestedOperation()
 print(result2)
