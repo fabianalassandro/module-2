@@ -5,34 +5,48 @@ Created on Thu Nov 29 13:58:35 2018
 @author: fabia
 """
 
-#print ("What's your name? ")
-#name = input()
-#print ("Hello {}!".format(name.title()))
-#
-#
-#print ("Where do you come from?")
-#country = input()
-#print ("I come from {}!".format(country.title()))
+###########################################
 
-#Another way to do the thing above is the one below:
+#CHAPTER 03 - FUNCTIONS & IMPORTING MODULES
 
-#name = input("What’s your name? ")
-#city = input("What’s your city? ")
-#print ("Hello {}! from {}".format(name,city))
+###########################################
 
-#def hello_world():
-#    print ("Hello World!")
-#    
-#def name_surname():
-#    print ("What's your name?")
-#    name = input()
-#  
-#    print ("My name is {}".format(name))
-#    
-#def addition():
-#    print (4)
-#    
-#name_surname()
+#---------------------------------------
+#Task 01 - Input from a user
+#---------------------------------------
+
+print ("What's your name? ")
+name = input()# Type: Fabiana
+print ("Hello {}!".format(name.title()))#-->Hello Fabiana!
+
+print()# To print a break line
+print ("Where do you come from?")#-->Where do you come from?
+country = input()# Type: Italy
+print ("I come from {}!".format(country.title()))#--> Where do you come from?
+
+#Another way to do the thing above is the following one:
+print()
+name = input("What's your name? ")
+city = input("What's your city? ")
+print ("Hello {}! from {}".format(name,city))
+
+#---------------------------------------
+#Task 02 - MY FIRST FUNCTION
+#---------------------------------------
+
+def hello_world():
+    print ("Hello World!")
+    
+def name_surname():
+    print ("What's your name?")
+    name = input()
+  
+    print ("My name is {}".format(name))
+    
+def addition():
+    print (4)
+    
+name_surname()
 
 
 ######################################################################

@@ -6,9 +6,11 @@ Created on Thu Nov 29 09:37:07 2018
 @author: fabia
 """
 
-############################
+###############################################
+
 #CHAPTER 2 - OPERATIONS, STRINGS AND VARIABLES
-############################
+
+###############################################
 
 #--------------------------
 # Task 1 - Simple operations with Python
@@ -33,7 +35,9 @@ H = 2 ** 4
 
 print(A)#--> -1 This is the result of 5 - 6. 
 
-print(H)#--> 16 This is the result of ((2*2)*2)*2 . 
+print(F)#--> 1 | This is a MODULO. We use it to get a REMAINDER. A Remainder is "la rimamenza" of number divided for another number.
+
+print(H)#--> 16 | This is the result of ((2*2)*2)*2 . 
 
 #PS: in order to see the result on the console when we run the file I need to use the print() function. It's just enough to put what we want to see on the console inside the parenthesis. NO "=". YES (). It's the same use or not space between number and operators.
 
@@ -78,12 +82,15 @@ print ("GOODBYE".lower())#--> goodbye
 #To transform a string in lowercase
 print ("the lord of the rings".title())#--> The Lord Of The Rings
 #To transform a string in upperlowercase
-print ('\n') #THIS IS A BREAK LINE 
+print ('\n') #THIS IS A BREAK LINE. It means go to a new line.
 
 print (("Bob \n") * 3)#--> here I'm printing Bob in a new line for three times
 
-#############################
+
+
+#------------------------
 # Another Example
+#------------------------
 S1 = 'hello ' + 'world\n'
 S2 = "Fabiana " * 3
 S3 = 5
@@ -94,6 +101,31 @@ print (str(S3))#--> 5 | This is a number transformed in a string. I cannot do op
 print(S3)#--> 5 | This is a number.I can do operaions with it.
 
 #PS: Multiplication has precedence on Addition
+
+
+
+#------------------------
+# Another Example n.2
+#------------------------
+print()
+a = 1
+a = a + 1
+print (a)#--> 2
+b = "hello"
+print (b)#--> hello
+c = b.title()
+print (c)#-->Hello
+d = "ciao"
+e = d.upper()
+print (d)#-->ciao
+print (e)#-->CIAO
+name = "Fabiana"
+f = "Hello {0}! ".format(name)
+print (f)#-->Hello Fabiana!
+name = "Marta" #--> Here I'm changing the name, but because I'm doing that after the function, I'm not replacing Fabiana with Marta
+print (f)#-->Marta
+print (f *5)#--> Hello Fabiana! Hello Fabiana! Hello Fabiana! Hello Fabiana! Hello Fabiana! 
+
 
 
 #--------------------------
@@ -109,7 +141,8 @@ print (age_description)
 
 age_description = "My age is {0} and I like {1}.".format(age, like)
 print (age_description)
-#Both the variables are giving the same result. {} is used as a placeholder to call the previous two variables
+#Both the variables are giving the same result.
+# {} is used as a placeholder to call the previous two variables
 
 
 # How to split a string by usig the split() function
