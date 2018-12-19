@@ -12,7 +12,7 @@ Created on Fri Dec 14 10:03:07 2018
 
 
 #-----------------------------------
-#Task 1
+#Task 1 - Let's start a Dictionary
 #-----------------------------------
 
 #salary = {}
@@ -21,9 +21,9 @@ Created on Fri Dec 14 10:03:07 2018
 #{}
 
 
-#-----------------------------------
-#Task 2 - Create a Dictionary
-#-----------------------------------
+#--------------------------------------------------------
+#Task 2 - Create a Dictionary. Retrieve and update values
+#--------------------------------------------------------
 print()
 print('***Create a Dictionary***')
 tel = {'Ellen':680, 'Jennifer':222, 'Fabiana':628, 'Muna':856}
@@ -42,15 +42,19 @@ tel['Fabiana'] = 620
 print(tel)#--> {'Ellen': 680, 'Jennifer': 222, 'Fabiana': 620, 'Muna': 856}
 
 
-#-----------------------------------
-#Task 3 - Look and update
-#-----------------------------------
+#---------------------------------------
+#Task 3 - Look, update and delete values
+#---------------------------------------
 
 #How to delete a key from a Dictionary
 print()
 print('***Delete a key from a Dictionary***')
 del tel ['Fabiana']
 print(tel)
+
+#-----------------------------------------------------
+# Task 4 - Retrieving keys and vales from a dictionary
+#-----------------------------------------------------  
 
 #Get keys and values from a Dictionary
 print()
@@ -89,18 +93,21 @@ else:
     print(whatever, 'not found!')#--> Gianni not found!    
 
 
-#########################
+#---------------------------------------------------
+# Task 5 - Convert keys and values in list data type
+#---------------------------------------------------    
 counts = {'a': 3, 'c': 1, 'b': 5}
 labels = list(counts.keys())
 print(labels)
 
+# Sorting a dictionary by values by using lambda
 labels.sort(key=lambda v:counts[v])
 print(labels)
 
-######################### 
-# *** Whinnie The Pooh - Example ***
-#Create a dictionary with keys and 2 values for evey key and then sort it for the second value using lampba function.
 
+ 
+#********** Whinnie The Pooh - Example **********
+#Create a dictionary with keys and 2 values for evey key and then sort it for the second value using lampba function.
 
 friends = { 'Pooh':[123, 'honey'], 'Tigger':[456, 'lollipop'], 'Eeyore':[789, 'carrots'], 'Piglet':[000, 'cakes'] }
 
@@ -122,10 +129,24 @@ print(friends_list)
 friends_list.append('P')#???????????????????????????
 
 
+#----------------------------------------------
+# Task 6 - How to avoid key errors
+#----------------------------------------------
+print()
+tel = {'Ellen':680, 'Jennifer':222, 'Fabiana':628, 'Muna':856}
 
-#########################
-#Sorting dictionary values in descending order
-#########################
+k = 'Eric'
+if k in tel:
+    print(k, ':', tel[k])
+else:
+    print(k, 'not found!')    
+
+# PS: if I try to set j = Muna and I replace k with j I'm going to print the key and the value connected to Muna, so --> Muna : 856
+
+#----------------------------------------------
+# Task 7 and 8 
+# Sorting dictionary values in descending order
+#----------------------------------------------
 
 #Sorting dictionary by key
 print()
@@ -143,9 +164,9 @@ print(metals_values)
 #By using '.values' we're sorting by values
 
 
-#########################
+#-------------------
 #Exercise in class
-#########################
+#-------------------
 
 print()
 print('Sorting dictionary by key')
@@ -154,9 +175,8 @@ something = {'iron':[7.8, 1.1, 10], 'gold':[19.3, 1.2, 20], 'zinc':[7.13, 1.3, 3
 print(something)
 
 print(sorted(something.keys(), key=lambda k: k))
-print(sorted(something))#This is theshort versione of the one on top 
+print(sorted(something))#This is the short versione of the one on top 
  
-
 #Order them by first value
 print()
 print('Sorting dictionary by value [0]')
