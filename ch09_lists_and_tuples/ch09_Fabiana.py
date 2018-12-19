@@ -141,7 +141,7 @@ print(x.sort())#--> None. It's still CONFUSING, but basically here I'm not stori
 print(x.sort(reverse=True))#--> None. Take a look above.
 
 #----------------------------------
-#Task 4 - Sorting a list
+#Task 5 - Using Tuples
 #----------------------------------
 print()
 print ('List VS Tuples')
@@ -194,7 +194,7 @@ print(a)#--> [50, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'z'] I'm adding an item at the end 
 
 
 #----------------------------------
-#Lambda function
+# Task 6 - Lambda function
 #----------------------------------
 print()
 print('Sorted type')
