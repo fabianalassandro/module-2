@@ -80,7 +80,7 @@ class Shape:
             t = turtle.Turtle(shape='square')
             t.tilt(45)
         else:
-            print >> sys.stderr, 'ERROR: shape (%s) not recognised' % shape
+            print >> sys.stderr, 'ERROR: shape (%s) not recognised' % shape#--> There's an error!
             return
         t.hideturtle()
         t.penup()
