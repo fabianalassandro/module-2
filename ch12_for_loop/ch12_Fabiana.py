@@ -11,6 +11,11 @@ Created on Thu Dec 20 09:31:06 2018
 
 ######################################
 
+
+#--------------------------------------
+# Task 01 - Using a for loop in a list
+#--------------------------------------
+
 my_shopping_cart = ["cake", "plates", "plastic forks", "juice", "cups"]
 
 for item in my_shopping_cart:# "item" activates the loop for the items 
@@ -27,12 +32,13 @@ for item in my_shopping_cart:# "item" activates the loop for the items
 print()     
 x = ['aa', 'bb', 'cc']
 x[1] = 33
-print(x)
+print(x)#--> ['aa', 33, 'cc']
+#Here I'm replacing bb with 33
 
 print()
 x.append('dd')
-print(x)
- 
+print(x)#--> ['aa', 33, 'cc', 'dd']
+ #Here I'm adding the value 'dd' in a list 
 
 #-------------------------------------
 # Task 02 - Update list values
@@ -40,13 +46,15 @@ print(x)
 
 print()
 values = [875, 23, 45]
-for val in values:# "val" activates the loop for the values 
-    print('My magic numbers are:' + str(val))#-->
-#My magic numbers are:875
-#My magic numbers are:23
-#My magic numbers are:45
-# Oh this is unexpected!  
-  
+for val in values:# "val" could be any other word 
+    print('My magic number is:' + str(val+50))#-->
+#My magic number is:875
+#My magic number is:23
+#My magic number is:45
+
+# The loop starts and goes into the list. Once there, it will pick the value and print it after the sentence: My magic number is: 
+#The loop will go ahead until it will find values in the list.  
+    
     
 #-------------------------------------
 # Task 03 - Create your own list
@@ -54,24 +62,33 @@ for val in values:# "val" activates the loop for the values
 print()
 values = ['this', 55, 'that']
 for item in values:
-    print('***', item)
+    print('***', item)#-->
+#*** this
+#*** 55
+#*** that    
+
+#In my list I can have strings and numbers
     
 #-------------------------------------
 # Task 04 - Loop trough a string type
 #-------------------------------------
     
 print()    
-for char in "Yes":# "char" activates the loop for the characters 
-    print(char)#-->    
+for charachters in "Yes":# "char" activates the loop for the characters 
+    print(charachters)#-->    
 #Y
 #e
 #s
+
+# With a loop I can also go inside of a string type and split it charachter by carachter
     
 #-------------------------------------
 # Task 05 - Loop through a tuple
 #-------------------------------------   
-    
-  #???????????????????????????????????
+print()    
+tuple_list = ('meow', 'woof', 'roar')
+for versi in tuple_list:
+    print (versi)
 
 
 #-------------------------------------
