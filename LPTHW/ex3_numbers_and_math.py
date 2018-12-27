@@ -34,3 +34,33 @@ print("How about some more.")
 print("Is it greater?", 5 > -2)
 print("Is it greater or equal?", 5 >= -2)
 print("Is it less or equal?", 5 <= -2)
+
+#-----------------------------------------
+#Rewrite the exercise by using float numbers
+
+print("I will now count my chickens:")
+
+print("Hens", 25.0 + 30.0 / 6.0)#--> 'Hens', 30
+#Before the division, then + 25
+
+print("Roosters", 100.0 - 25.0 * 3.0 % 4.0)#--> 'Roosters', 97
+#Before the moltiplication (25*3=75), then the modulo operation (75%4=3), finally 100-3= 97
+
+print("Now I will count the eggs:")#-->Now I will count the eggs:
+
+print(3.0 + 2.0 + 1.0 - 5.0 + 4.0 % 2.0 - 1.0 / 4.0 + 6.0)#--> 7
+
+print("It is true that 3 + 2 < 5 - 7?")#-->It is true that 3 + 2 < 5 - 7?
+
+print(3.0 + 2.0 < 5.0 - 7.0)#--> False
+#By using <, >, <=, => the result is True or False
+print("What is 3 + 2?", 3.0 + 2.0)#-->'What is 3 + 2?', 5
+print("What is 5 - 7?", 5.0 - 7.0)#-->'What is 5 - 7?', -2
+
+print("Oh, that's why it's False.")
+
+print("How about some more.")
+
+print("Is it greater?", 5.0 > -2.0)
+print("Is it greater or equal?", 5.0 >= -2.0)
+print("Is it less or equal?", 5.0 <= -2.0)
