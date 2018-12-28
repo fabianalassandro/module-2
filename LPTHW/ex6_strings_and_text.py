@@ -19,5 +19,6 @@ w = "This is the left side of..."
 e = "a string with a right side."
 
 print (w + e)#--> This is the left side of...a string with a right side.
+# By using + I can add a string to another one
 
 #By using format I can insert variables in strings. A variable can be just a word or an entire strings, formatted as wellself.
