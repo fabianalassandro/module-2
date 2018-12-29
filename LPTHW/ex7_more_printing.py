@@ -17,5 +17,5 @@ end11 = "e"
 end12 = "r"
 
 #watch end = '' a the end. try removing it to see what happens
-print(end1 + end2 + end3 + end4 + end5 + end6, end=' ')# end=' ' is the way to add a space at the end of the word "Cheese". Don't forget the , before end=''
-print(end7 + end8 + end9 + end10 + end11 + end12)
+print(end1 + end2 + end3 + end4 + end5 + end6, end=' ')# end=' ' is the way to avoid going on a new line and just add the following print()
+print(end7 + end8 + end9 + end10 + end11 + end12)#--> Cheese Burger
