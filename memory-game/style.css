@@ -1,0 +1,56 @@
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+/*
+Box sizing: border-box is to keep padding and border inside the box. The default is content-box that add padding and border out of the box. PS: in border-box margin is non included.
+*/
+
+body{
+  height: 100vh;
+  /*This is to set the body as 100% of the viewport (webpage*/
+  background: #81cdd1;
+  display: flex;
+}
+/*
+vh = viewport height. Viewport is the visible area of a webpage.
+vh = 1% of viewport height
+vw = 1% of viewport width
+*/
+
+.memory-game{
+  width: 720px;
+  height: 720px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid yellow;
+  margin: auto
+}
+
+.memory-card{
+  width: calc(25% - 10px); /*Css calc function | here I'm removing the 5px on the right and on the left from the width*/
+  height: 33.333%;
+  margin: 5px;
+  position: relative;
+  border: 2px solid #add268;
+  transform: scale(1);
+}
+
+.memory-card:active {
+  transform: scale(.97); /*To create the bounce effect on click*/
+  transition: transform .2s;
+}
+
+.front-face, .back-face{
+  width:100%; /*to set the images taking 100% of its container*/
+  height:100%; /*to set the images taking 100% of its container*/
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  border: 2px solid #51b9e5
+}
+
+img{
+  max-width: 100%
+}
