@@ -25,7 +25,8 @@ vw = 1% of viewport width
   display: flex;
   flex-wrap: wrap;
   border: 2px solid yellow;
-  margin: auto
+  margin: auto;
+  perspective: 1000px
 }
 
 .memory-card{
@@ -35,6 +36,12 @@ vw = 1% of viewport width
   position: relative;
   border: 2px solid #add268;
   transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s
+}
+
+.flip{
+  transform:rotateY(180deg); /* To flip the card of 180 degrees */
 }
 
 .memory-card:active {
@@ -48,7 +55,12 @@ vw = 1% of viewport width
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  border: 2px solid #51b9e5
+  border: 2px solid #51b9e5;
+  backface-visibility: hidden; /*To hide the backface of the cards by default. This means when I click, the card is flipping by showing an empty face.*/
+}
+
+.front-face{
+  transform: rotateY(180deg); /*After hide the backface above here by rotate the frontface I'm making show them on click.*/
 }
 
 img{
