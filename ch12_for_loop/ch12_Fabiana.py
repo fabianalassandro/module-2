@@ -214,16 +214,20 @@ for i in range(len(values)):
     values[i] = values[i] * 2
 print(values)#-->[6, 24, 18]
 
+
+
+#-----------------------------------------------
+# Task 11 - Using a loop with the range function
+#-----------------------------------------------
 values = ['fabi', 'marta', 'andrea', 'piero', 'alex']
 for i in range(len(values)):
     values[i] = values[i] * 3
 print(values)#-->['fabifabifabi', 'martamartamarta', 'andreaandreaandrea', 'pieropieropiero', 'alexalexalex']
-# ????????????????????????
+# Using a loop to get values contained in a dictionary, repeat it 3 times and keep doing this until the 
 
 for i in range(3,10,2):
     print(i)
 #this is giving the numbers from a range that goes from 3 to 10, jumping from 2 to 2 
-
 
 
 
@@ -260,7 +264,9 @@ for item in colours:
         d[item] = d[item] + 1
         print(d)
       
-###############################
+#------------------------------------------
+# Task 13 - Using nested loops
+#------------------------------------------   
 print()
 numbers = [1, 2, 3]
 letters = ['A', 'B', 'C']
@@ -293,4 +299,30 @@ for oval in outer_vals:
 #{1: 'C', 2: 'C'}
 #{1: 'C', 2: 'C', 3: 'A'}
 #{1: 'C', 2: 'C', 3: 'B'}
-#{1: 'C', 2: 'C', 3: 'C'}        
+#{1: 'C', 2: 'C', 3: 'C'}      
+        
+#------------------------------------------
+# Task 14 - Multiplication table
+#------------------------------------------ 
+
+print()        
+for i in range(1,7):
+   for j in range(1,11):
+      print('{0:>3}'.format(i * j), end='')
+   print('\n')#-->
+#  1  2  3  4  5  6  7  8  9 10
+#
+#  2  4  6  8 10 12 14 16 18 20
+#
+#  3  6  9 12 15 18 21 24 27 30
+#
+#  4  8 12 16 20 24 28 32 36 40
+#
+#  5 10 15 20 25 30 35 40 45 50
+#
+#  6 12 18 24 30 36 42 48 54 60   
+
+#So here I'm creating a loop that is taking the first range of number that is going from 1 to 7 and I start picking the first number, such as 1. 
+#Then I go to the second loop (1 to 11) and I start to do: 1 * 1, then 1 * 2, 1 * 3 until 10. 
+# After that, on the second row I'll pick 2 and I start: 2*1, 2*2, 2*3 until 10. 
+#I'll keep doing this until I'll finish the loop. The very last bit is 6*10 --> 60       

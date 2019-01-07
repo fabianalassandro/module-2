@@ -28,7 +28,6 @@ class MovingShape:
          
         self.goto(self.x, self.y)
         
- 
         
     def goto(self,x,y):
         self.figure.goto(x,y)
@@ -45,9 +44,12 @@ class MovingShape:
         
         self.goto(self.x,self.y)
         
+        
+        
 class Square(MovingShape):
     def __init__(self,frame,diameter):
         MovingShape.__init__(self,frame,'square',diameter)
+      
         
 class Diamond(MovingShape):
     def __init__(self,frame,diameter):
@@ -58,9 +60,12 @@ class Diamond(MovingShape):
         
         self.maxx = (frame.width*0.98) - self.diameter / 2
         self.maxy = (frame.height*0.965) - self.diameter / 2
+       
         
 class Circle(MovingShape):
     def __init__(self,frame,diameter):
         MovingShape.__init__(self,frame,'circle',diameter)
-        
+ 
+
+       
 # Change colour and size by moving - take a look at the code fo beginners book      
