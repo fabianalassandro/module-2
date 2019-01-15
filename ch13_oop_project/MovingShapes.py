@@ -28,10 +28,21 @@ class MovingShape:
          
         self.goto(self.x, self.y)
         
+    
+    def startMove(self):
+       if r() > 0.5: #07/07
+           self.dx = 5 + 10*r() #07/06
+           self.dy = 5 + 10*r() #07/06
+       else: #07/07
+           self.dx = -(5 + 10*r()) #07/06
+           self.dy = -(5 + 10*r()) #07/06     
+     
         
     def goto(self,x,y):
         self.figure.goto(x,y)
-  
+        
+        
+    
     def moveTick(self):  
         if self.x >= self.maxx or self.x <=self.minx:
             self.dx = self.dx * -1 
