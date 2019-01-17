@@ -1,0 +1,96 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<title>Women in Tech</title>
+	<link rel="stylesheet" href="{{ url_for ('static', filename='css/reset.css') }}" >
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css') }}" >
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/site.webmanifest">
+	<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<div id="wrapper" class="container">
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+		<a class="navbar-brand" href="/">WiT</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="grace-hopper.html">Grace Hopper</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="katherine-johnson.html">Katherine Johnson</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="ada-lovelace.html">Ada Lovelace</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+
+	<h1>Women in tech</h1>
+
+	<p>Click on the links below and discover the pioneer women in tech. Smart and cool as hell!<br /> </p>
+
+	<nav>
+		<ul>
+			<li><a href="grace-hopper.html">Grace Hopper</a></li>
+			<li><a href="katherine-johnson.html">Katherine Johnson</a></li>
+			<li><a href="ada-lovelace.html">Ada Lovelace</a></li>
+		</ul>
+	</nav>
+
+	<div class="card-group">
+	  <div class="card">
+	    <img class="card-img-top img-fluid index-images" src="{{ url_for ('static', filename='images/Commodore_Grace_M_Hopper_USN.jpg') }}" alt="Grace Hopper.">
+	    <div class="card-body">
+	      <h5 class="card-title">Grace Hopper</h5>
+	      <p class="card-text">Nicknames: "Amazing Grace", "Grandma COBOL".</p>
+				<p><a href="grace-hopper.html" class="btn btn-primary">Go to Grace Hopper's Bio</a></p>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <img class="card-img-top img-fluid index-images" src="{{ url_for ('static', filename='images/Katherine_Johnson_at_NASA_in_1966-square.jpg') }}" alt="Katherine Johnson.">
+	    <div class="card-body">
+	      <h5 class="card-title">Katherine Johnson</h5>
+	      <p class="card-text">Known for: Calculating the trajectories for many NASA missions</p>
+				<p><a href="katherine-johnson.html" class="btn btn-primary">Go to Katherine Johnson's Bio</a></p>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <img class="card-img-top img-fluid index-images" src="{{ url_for ('static', filename='images/Ada_Lovelace_portrait.jpg') }}" alt="Ada Lovelace.">
+	    <div class="card-body">
+	      <h5 class="card-title">Ada Lovelace</h5>
+	      <p class="card-text">Known for: Mathematics, Computing and other cool stuff.</p>
+				<p><a href="ada-lovelace.html" class="btn btn-primary">Go to Ada Lovelace's Bio</a></p>
+
+	    </div>
+	  </div>
+	</div>
+
+	</div> <!-- /#wrapper -->
+</body>
+
+</html>
