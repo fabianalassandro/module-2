@@ -17,16 +17,22 @@ Created on Wed Jan 16 09:39:16 2019
 # Task 1 - Create my app
 #-----------------------------
 
-
-from flask import Flask, render_template
-
-app = Flask("MyApp")
-
-@app.route("http://fabianalassandro.uk/style.css" )
-
+from flask import Flask
+app = Flask("MyFirstApp")#--> Flask object
 @app.route("/")
 def hello():
     return "<h1>Hello World</h1> <ul><li><a href=\"/morning\">Good Morning</a></li></ul><a href=\"style.css\"></a>"
+app.run(debug=True) 
+#It will return a few instructions and among all of them, the most important is the URL (//127.0.0.1:5000/) if I copy and paste it on the browser I can see what I've just done typed between the parenthesis. I can print just a string, for example "Hello World" or direclty some html.
+
+
+#-----------------------------------
+# Task 2 - Use routes and decorators
+#-----------------------------------
+
+from flask import Flask
+
+app = Flask("MyApp")
 
 @app.route("/morning")
 def morning():
@@ -40,31 +46,87 @@ def afternoon():
 def night():
     return "<h1>Good Night</h1>"
 
-@app.route("/blabla")
+
+#app.run(debug=True) 
+
+
+
+#--------------------------------------------
+# Task 3 - Using the render_template function
+#--------------------------------------------
+
+from flask import Flask, render_template 
+
+app = Flask("MyApp")
+@app.route("/home")
 def homepage():
-    return render_template("/index.html")
+    return render_template("templates/index.html")# Here I'm using an HTML file that in Flask is called template.
 
-app.run(debug=True) #--> Serving Flask app "MyApp" (lazy loading)
-# * Environment: production
-#   WARNING: Do not use the development server in a production environment.
-#   Use a production WSGI server instead.
-# * Debug mode: on
-# * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-# * Restarting with stat
-# * Debugger is active!
-# * Debugger PIN: 263-454-907
-#127.0.0.1 - - [16/Jan/2019 09:45:00] "GET / HTTP/1.1" 200 -
-#127.0.0.1 - - [16/Jan/2019 09:45:00] "GET /favicon.ico HTTP/1.1" 404 -
-
-#What I need is the URL created, such as: http://127.0.0.1:5000/. If I copy and paste this URL in the browser I will finally see "Hello World" on a blank page.
-
-#Second step: if I try to add some HTML inside the "" after the return I will see my changes 
+#app.run(debug=True) 
 
 
-#---------------------------------
-# Task 2 - Create different pages
-#---------------------------------
+#----------------------------
+# Task 4 - Using variables
+#----------------------------
+# Below an example of how a html looks like by using Jinja2
 
+#<!DOCTYPE html>
+#<html>
+#  <head>
+#    <title>My Flask App Page</title>
+#    <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css") }}">
+#  </head>
+#  <body>
+#    {% if name %}
+#      <p>Hello {{name}}!</p>
+#    {% else %}
+#      <p>Hello anonymus person!</p>
+#    {% endif %}
+#  </body>
+#</html>
 
-
+ #By using {% %} we can insert a variable coming from Python, that I'm setting below.
  
+ 
+from flask import Flask, render_template 
+
+app = Flask("MyApp")
+
+@app.route("/home2")
+def helloHello():
+    return "Hello World!"
+
+@app.route("/<name>")
+def helloSomeone(name):
+    return render_template("templates/index.html", name=name.title())# By doing this if I type any word or name after the URL created from Flask and visibile in the console, in the page on the browser I'll see the message: Hello Fabiana. This is because in the HTML page by using Jinja2 we're adding the parameter of the name typed in the address bar imported and used in the the HTML thanks to Jinja2
+
+#app.run(debug=True) 
+ 
+ 
+ #--------------------------------------
+# Task 5 - Get email address from user
+#---------------------------------------
+ 
+ #What to add in the HMTL file:
+
+#  <p>Let's keep in touch!</p>
+#  <div id="contact-form">
+#    <form method="post" action="/signup">
+#      <label for="email">Email address:</label>
+#      <input type="email" id="email" name="email" required="required">
+#      <input type="submit" id="submit-button" name="submit" value="Submit">
+#    </form>
+#  </div>
+
+@app.route("/about")
+def about():
+    return render_template("templates/about.html", title="about")
+
+@app.route("templates/confirmation", methods=["POST"])
+def confirmation():
+    form_data = request.form
+    email = form_data["email"] #what I put in the [] is the attribute name I added in the form in about.hml 
+    result = "All OK"
+    return render_template("confirmation.html", title="Form confirmation", **locals())#--> ** means that I can put as many arguments as I like without pre-set them.
+
+app.run(debug=True) 

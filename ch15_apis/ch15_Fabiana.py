@@ -44,8 +44,13 @@ print (response.url)#--> http://api.openweathermap.org/data/2.5/weather?q=Ranzo%
 print (response.status_code) #--> 200
 print (response.headers["content-type"]) #--> application/json; charset=utf-8
 
+print()
 data = response.json()
 print(type(data)) #--> <class 'dict'> So, json is a dictionary
+print(data)
+
+print()
+print(response.text)
 
 
 
