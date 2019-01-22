@@ -17,11 +17,12 @@ Created on Thu Jan 10 14:00:48 2019
 #--------------------------------------------
 
 import requests #requests is a library that comes built-in with Python.
+import config #to hide the api key
 
 def send_simple_message():
     return requests.post(
         "https://api.mailgun.net/v3/sandboxfd484f6c94514f2f965319b7da86eb41.mailgun.org/messages",
-        auth=("api", "api key"), #because I'm using github it's better don't put api key available for everyone
+        auth=("api", config.api_key), 
         data={"from": "Fabiana <hellohello@fakedomain.com>",
               "to": ["fabianalassandro@gmail.com"],
               "subject": "I'm an interesting subject",
