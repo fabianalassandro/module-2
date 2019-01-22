@@ -17,12 +17,12 @@ Created on Thu Jan 10 14:00:48 2019
 #--------------------------------------------
 
 import requests #requests is a library that comes built-in with Python.
-import config #to hide the api key
+import config #to hide the api key. In the config.py file there is the api key stored in a variable.
 
 def send_simple_message():
     return requests.post(
         "https://api.mailgun.net/v3/sandboxfd484f6c94514f2f965319b7da86eb41.mailgun.org/messages",
-        auth=("api", config.api_key), 
+        auth=("api", config.api_key), #here I'm calling the API stored in a variable called "api_key" inside the file confif.py
         data={"from": "Fabiana <hellohello@fakedomain.com>",
               "to": ["fabianalassandro@gmail.com"],
               "subject": "I'm an interesting subject",
@@ -39,7 +39,7 @@ send_simple_message()
 #import requests #I commented this out becasue it's already at the top of this file.
 
 endpoint = "http://api.openweathermap.org/data/2.5/weather"
-payload = {"q": "Ranzo,IT", "units":"metric", "appid":"ee78e9fbd81eb24eabf882b6506fcc1a"}
+payload = {"q": "Ranzo,IT", "units":"metric", "appid": config.api_key_weather}
 response = requests.get(endpoint, params=payload)
 print (response.url)#--> http://api.openweathermap.org/data/2.5/weather?q=Ranzo%2CIT&units=metric&appid=ee78e9fbd81eb24eabf882b6506fcc1a
 print (response.status_code) #--> 200
